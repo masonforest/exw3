@@ -128,6 +128,7 @@ defmodule ExW3 do
     case @client_type do
       :http -> apply(Ethereumex.HttpClient, method_name, arguments)
       :ipc -> apply(Ethereumex.IpcClient, method_name, arguments)
+      :websocket -> apply(Ethereumex.WebSocketClient, method_name, arguments)
       _ -> {:error, :invalid_client_type}
     end
   end

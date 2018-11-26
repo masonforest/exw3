@@ -36,7 +36,7 @@ defmodule ExW3.MixProject do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:ethereumex, "~> 0.4.0"},
-      {:abi, "~> 0.1.8"},
+      {:abi, "~> 0.1.12"},
       {:poison, "~> 4.0.1"}
     ]
   end
