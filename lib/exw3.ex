@@ -738,7 +738,7 @@ defmodule ExW3 do
 
     def handle_cast({:at, {name, address}}, state) do
       contract_info = state[name]
-      {:noreply, Map.put(state, name, contract_info ++ [address: address])}
+      {:noreply, Map.put(state, name, Keyword.put(contract_info, :address, address))}
     end
 
     def handle_cast({:register, {name, contract_info}}, state) do
